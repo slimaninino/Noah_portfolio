@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { ArrowRight, Download, Github, Linkedin, Send, GraduationCap, Rss } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Send, GraduationCap, Rss } from "lucide-react";
 import { useLenis } from "lenis/react";
 import { profile, links } from "@/data/content";
 import { Reveal } from "@/components/ui/Reveal";
@@ -91,16 +91,6 @@ export function Hero() {
               >
                 View Projects
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-              </a>
-            </Magnetic>
-            <Magnetic>
-              <a
-                href={links.resume}
-                download
-                className="glass inline-flex items-center gap-2 rounded-full px-6 py-3.5 text-sm font-medium text-paper"
-              >
-                <Download size={16} />
-                Download Résumé
               </a>
             </Magnetic>
           </div>

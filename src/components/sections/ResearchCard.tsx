@@ -23,7 +23,11 @@ export function ResearchCard({
 
   return (
     <Reveal>
-      <article className="glass grid gap-8 rounded-3xl p-7 sm:p-9 lg:grid-cols-[1fr_280px]">
+      <article
+        className={`glass grid gap-8 rounded-3xl p-7 sm:p-9 ${
+          figure ? "lg:grid-cols-[1fr_190px]" : ""
+        }`}
+      >
         <div>
           <div className="flex flex-wrap items-center gap-3">
             <div
@@ -66,8 +70,8 @@ export function ResearchCard({
           </a>
         </div>
 
-        <div className="hidden lg:block">
-          {figure ? (
+        {figure && (
+          <div className="hidden lg:block">
             <div className="glass overflow-hidden rounded-2xl border border-line">
               <Image
                 src={figure.src}
@@ -77,19 +81,8 @@ export function ResearchCard({
                 className="h-auto w-full"
               />
             </div>
-          ) : (
-            <div
-              className="flex h-full min-h-[220px] items-center justify-center rounded-2xl"
-              style={{
-                background: `linear-gradient(160deg, ${from}14, transparent 60%)`,
-                border: "1px solid var(--color-line)",
-              }}
-              aria-hidden
-            >
-              <Icon size={48} style={{ color: from, opacity: 0.5 }} />
-            </div>
-          )}
-        </div>
+          </div>
+        )}
       </article>
     </Reveal>
   );

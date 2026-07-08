@@ -151,13 +151,6 @@ export function Navbar() {
                   {item.label}
                 </a>
               ))}
-              <a
-                href={links.resume}
-                download
-                className="mt-2 rounded-full bg-signal px-4 py-3 text-center text-sm font-medium text-ink"
-              >
-                Download Résumé
-              </a>
             </nav>
           </motion.div>
         )}

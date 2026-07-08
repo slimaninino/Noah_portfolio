@@ -1,4 +1,4 @@
-import { Mail, Download, Github, Linkedin, Send, GraduationCap, Rss, MapPin } from "lucide-react";
+import { Mail, Github, Linkedin, Send, GraduationCap, Rss, MapPin } from "lucide-react";
 import { profile, links, openToList } from "@/data/content";
 import { Reveal } from "@/components/ui/Reveal";
 import { Magnetic } from "@/components/ui/Magnetic";
@@ -64,16 +64,6 @@ export function Contact() {
             >
               <Mail size={16} />
               Email Me
-            </a>
-          </Magnetic>
-          <Magnetic>
-            <a
-              href={links.resume}
-              download
-              className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-paper"
-            >
-              <Download size={16} />
-              Résumé
             </a>
           </Magnetic>
         </Reveal>

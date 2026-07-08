@@ -16,9 +16,11 @@ export function ProjectCase({ project, index }: { project: Project; index: numbe
   const reverse = index % 2 === 1;
 
   return (
-    <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div className="grid items-center gap-10 lg:grid-cols-[320px_1fr] lg:gap-16">
       <Reveal className={reverse ? "lg:order-2" : ""}>
-        <ProjectVisual id={project.id} label={`${project.title.toLowerCase().replace(/\s+/g, "-")}`} icon={Icon} from={from} to={to} />
+        <div className="mx-auto w-full max-w-[280px] lg:max-w-none">
+          <ProjectVisual id={project.id} label={`${project.title.toLowerCase().replace(/\s+/g, "-")}`} icon={Icon} from={from} to={to} />
+        </div>
       </Reveal>
 
       <Reveal className={reverse ? "lg:order-1" : ""}>
