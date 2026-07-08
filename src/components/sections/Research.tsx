@@ -3,6 +3,7 @@ import { research } from "@/data/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ResearchCard } from "./ResearchCard";
+import { withBasePath } from "@/lib/basePath";
 
 const paperIcons = { dziribert: FlaskConical, "auto-fl-iot": ShieldAlert, "xai-ids": Zap };
 
@@ -26,7 +27,7 @@ export function Research() {
               figure={
                 paper.id === "xai-ids"
                   ? {
-                      src: "/ASREM2026/assets/xai-ids/03_model_comparison_bar.png",
+                      src: withBasePath("/ASREM2026/assets/xai-ids/03_model_comparison_bar.png"),
                       width: 1932,
                       height: 882,
                       alt: "Bar chart comparing macro F1 scores of Random Forest, XGBoost, and LightGBM on the RT-IoT2022 benchmark",

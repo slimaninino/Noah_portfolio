@@ -3,6 +3,8 @@
 // Edit this file to update copy anywhere across the portfolio.
 // ─────────────────────────────────────────────────────────────
 
+import { withBasePath } from "@/lib/basePath";
+
 export const profile = {
   name: "N. Slimani",
   fullName: "Nasreddine Slimani",
@@ -45,7 +47,7 @@ export const links = {
   researchgate: "https://www.researchgate.net/profile/Nasreddine-Slimani",
   telegram: "https://t.me/s_noah",
   blog: "https://nslimani.blogspot.com/",
-  resume: "/resume.pdf",
+  resume: withBasePath("/resume.pdf"),
 } as const;
 
 export const achievements = [
@@ -297,7 +299,7 @@ export const research: ResearchPaper[] = [
       "SSFL reduced labeling requirements while maintaining performance",
       "DistilBERT offered a lighter alternative with competitive results",
     ],
-    link: "/research-dziribert/",
+    link: withBasePath("/research-dziribert/"),
     accent: "signal",
   },
   {
@@ -313,7 +315,7 @@ export const research: ResearchPaper[] = [
       "Automated pipeline reduces manual FL setup and deployment effort",
       "Very low communication overhead using parameter exchange only",
     ],
-    link: "/ResearchAuto-FL/",
+    link: withBasePath("/ResearchAuto-FL/"),
     accent: "teal",
   },
   {
@@ -329,7 +331,7 @@ export const research: ResearchPaper[] = [
       "4-feature SHAP consensus shared across all three models",
       "88% feature reduction with under 0.007 F1 loss for edge deployment",
     ],
-    link: "/ASREM2026/",
+    link: withBasePath("/ASREM2026/"),
     accent: "violet",
   },
 ];

@@ -16,6 +16,7 @@ import { Footer } from "@/components/layout/Footer";
 import { IntroSequence } from "@/components/layout/IntroSequence";
 import { CursorGlow } from "@/components/layout/CursorGlow";
 import { profile, links } from "@/data/content";
+import { withBasePath } from "@/lib/basePath";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://noahswitch.github.io";
 const TITLE = "N. Slimani — Systems Engineer, Cloud Architect & ML Researcher";
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     description: profile.oneLiner,
   },
   icons: {
-    icon: "/favicon.png",
+    icon: withBasePath("/favicon.png"),
   },
 };
 

@@ -3,6 +3,7 @@ import { profile } from "@/data/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { Tilt } from "@/components/ui/Tilt";
+import { withBasePath } from "@/lib/basePath";
 
 export function About() {
   return (
@@ -34,7 +35,7 @@ export function About() {
             <Tilt max={5} className="mx-auto w-full max-w-[280px] lg:mx-0">
               <div className="glass overflow-hidden rounded-3xl">
                 <Image
-                  src="/avatar.png"
+                  src={withBasePath("/avatar.png")}
                   alt={`Portrait illustration of ${profile.fullName}`}
                   width={560}
                   height={560}
