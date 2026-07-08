@@ -17,7 +17,7 @@ import { IntroSequence } from "@/components/layout/IntroSequence";
 import { CursorGlow } from "@/components/layout/CursorGlow";
 import { profile, links } from "@/data/content";
 
-const SITE_URL = "https://noahswitch.github.io";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://noahswitch.github.io";
 const TITLE = "N. Slimani — Systems Engineer, Cloud Architect & ML Researcher";
 
 export const metadata: Metadata = {
